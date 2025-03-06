@@ -1,0 +1,360 @@
+:root {
+    --text-color: rgb(0, 0, 0); /* Основной цвет текста (черный) */
+    --text-color-white: rgb(255, 255, 255); /* Цвет белого текста */
+    --primary-color: #F92E15; /* Основной красный цвет для логотипа, кнопки и бейджа */
+    --container-padding: 32px; /* Фиксированные поля для десктопа и планшетов (32px с каждой стороны) */
+}
+
+* {
+    box-sizing: border-box; /* Для корректного расчета размеров: ширина и высота включают padding и border */
+}
+
+body {
+    font-family: "Inter", Helvetica, sans-serif; /* Основной шрифт для текста */
+    color: var(--text-color); /* Цвет текста (черный) */
+    font-size: 16px; /* Базовый размер шрифта */
+    line-height: 120%; /* Высота строки для текста */
+    margin: 0; /* Убираем стандартные отступы у body */
+}
+
+/* Стили для шапки */
+header {
+    font-family: "Geologica", Helvetica, sans-serif; /* Шрифт для шапки */
+    max-width: 1000px; /* Максимальная ширина шапки, как на макете */
+    font-size: 16px; /* Базовый размер шрифта для шапки */
+    line-height: 100%; /* Высота строки */
+    margin: 0 auto; /* Центрируем шапку */
+    padding: 24px 0; /* Вертикальные отступы: 18px сверху и снизу */
+    align-items: flex-end; /* Выравниваем элементы по нижнему краю */
+    justify-content: space-between; /* Распределяем элементы: логотип слева, иконки справа */
+}
+
+nav {
+    display: flex; /* Flexbox для элементов навигации */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    gap: 84px; /* Расстояние между логотипом и первой ссылкой, как на макете */
+    padding: 0 32px;
+}
+
+.logo {
+    text-transform: uppercase; /* Логотип в верхнем регистре */
+    font-size: 18px; /* Размер шрифта логотипа, как на макете */
+    font-weight: bold; /* Жирный шрифт для логотипа */
+    color: var(--primary-color); /* Красный цвет логотипа */
+    margin-left: 32px; /* Дополнительный отступ слева, итого 32px (поле контейнера) + 32px = 64px */
+    margin-right: 0; /* Убираем отступ справа */
+}
+
+/* Группа ссылок */
+.navLinks {
+    display: flex; /* Flexbox для ссылок */
+    align-items: center; /* Выравниваем ссылки по центру по вертикали */
+    gap: 38.4px; /* Расстояние между ссылками, как на макете */
+}
+
+/* Группа иконок */
+.navIcons {
+    display: flex; /* Flexbox для иконок */
+    align-items: center; /* Выравниваем иконки по центру по вертикали */
+    gap: 12px; /* Расстояние между иконками, как на макете */
+    margin-left: auto; /* Прижимаем иконки к правому краю */
+}
+
+nav a {
+    color: var(--text-color); /* Цвет ссылок (черный) */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    font-size: 16px; /* Размер шрифта ссылок, как на макете */
+}
+
+nav a:hover {
+    color: var(--primary-color); /* Красный цвет при наведении на ссылки */
+}
+
+.search, .user, .hasBadge {
+    display: flex; /* Flexbox для иконок */
+    align-items: center; /* Выравниваем содержимое иконок по центру */
+}
+
+.hasBadge {
+    position: relative; /* Для позиционирования бейджа корзины */
+}
+
+.cartBadge {
+    position: absolute; /* Абсолютное позиционирование бейджа */
+    left: 50%; /* Центрируем бейдж по горизонтали */
+    bottom: 50%; /* Центрируем бейдж по вертикали */
+    width: 17px; /* Ширина бейджа, как на макете */
+    aspect-ratio: 1/1; /* Квадратная форма */
+    border-radius: 50%; /* Круглая форма */
+    background: var(--primary-color); /* Красный фон бейджа */
+    color: var(--text-color-white); /* Белый цвет текста */
+    text-align: center; /* Центрируем текст внутри бейджа */
+    line-height: 100%px; /* Высота строки для выравнивания текста */
+    font-size: 12px; /* Размер шрифта внутри бейджа */
+}
+
+/* Основной контент */
+body main {
+    margin-top: 24px; /* Устанавливаем расстояние от нижнего края шапки до заголовка 30px (18px padding-bottom + 12px margin-top) */
+}
+
+section {
+    display: flex; /* Flexbox для секции */
+    text-align: left; /* Выравнивание текста по левому краю */
+    flex-direction: column; /* Элементы в столбце */
+    margin: 0 auto; /* Центрируем секцию */
+    padding: 0 32px;
+    width: calc(100% - 2 * var(--container-padding)); /* Ширина с учетом полей 32px */
+    max-width: 1000px; /* Максимальная ширина секции */
+    position: relative; /* Для позиционирования бейджа */
+}
+
+h1 {
+        font-family: "Geologica", Helvetica, sans-serif; /* Шрифт для заголовка */
+        font-size: 100px; /* Размер шрифта заголовка, как на макете */
+        font-weight: bold; /* Жирный шрифт */
+        line-height: 105%; /* Высота строки 105%, как на макете */
+        letter-spacing: -3px; /* Расстояние между буквами -3%, эквивалентно -3px при font-size: 100px */
+        margin-bottom: 24px; /* Отступ снизу до текста, как на макете */
+        color: var(--primary-color); /* Красный цвет заголовка */
+ }
+
+
+/* Контейнер для текста и кнопки */
+.textButtonContainer {
+    display: flex; /* Flexbox для текста и кнопки */
+    flex-direction: row; /* Текст и кнопка в одном ряду */
+    align-items: flex-end; /* Выравниваем нижние границы текста и кнопки */
+    margin-bottom: 32px; /* Отступ снизу до изображения, как на макете */
+    gap: 20px; /* Зазор между текстом и кнопкой, как на макете */
+}
+
+/* Текст внутри контейнера */
+.textButtonContainer p {
+    font-size: 16px; /* Размер шрифта текста */
+    line-height: 130%; /* Высота строки */
+    max-width: 70%; /* Ширина текста, как на макете */
+}
+
+/* Кнопка внутри контейнера */
+.textButtonContainer button {
+    display: flex; /* Flexbox для кнопки */
+    width: 222px; /* Ширина кнопки, как на макете */
+    height: 45px; /* Высота кнопки */
+    justify-content: center; /* Центрируем текст внутри кнопки по горизонтали */
+    align-items: center; /* Центрируем текст внутри кнопки по вертикали */
+    margin-left: auto; /* Прижимаем кнопку к правому краю */
+    background: var(--primary-color); /* Красный фон кнопки */
+    color: var(--text-color-white); /* Белый цвет текста */
+    border: none; /* Убираем границу */
+    font-family: "Inter", Helvetica, sans-serif; /* Шрифт кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+button:hover {
+    background: #d12712; /* Темнее красного при наведении */
+}
+
+.heroImage {
+    width: 100%; /* Изображение растягивается на всю ширину контейнера */
+    margin: 0 auto; /* Центрируем изображение */
+    margin-bottom: 80px; /* Отступ снизу до футера */
+}
+
+.heroBadge {
+    position: absolute; /* Абсолютное позиционирование бейджа */
+    right: 7%; /* Смещаем бейдж левее, чтобы он перекрывал изображение */
+    top: 55%; /* Центрируем по вертикали относительно изображения */
+    transform: translateY(-50%) rotate(15deg); /* Центрируем по вертикали и поворачиваем на 15 градусов */
+    display: flex; /* Flexbox для содержимого бейджа */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+}
+
+.heroBadgeImg {
+    width: 154px; /* Размер звезды, как в SVG */
+    height: 153px; /* Высота звезды */
+    fill: var(--primary-color); /* Красный цвет звезды */
+    stroke-width: 3.733px; /* Толщина обводки */
+    stroke: var(--text-color-white); /* Белая обводка */
+}
+
+.heroBadgeText {
+    color: var(--text-color-white); /* Белый цвет текста */
+    text-align: center; /* Центрируем текст */
+    font-family: "Geologica", Helvetica, sans-serif; /* Шрифт текста */
+    font-size: 24.834px; /* Размер шрифта */
+    font-weight: 900; /* Жирный шрифт */
+    line-height: 87%; /* Высота строки */
+    text-transform: uppercase; /* Текст в верхнем регистре */
+    position: absolute; /* Абсолютное позиционирование текста внутри бейджа */
+}
+
+footer {
+    display: flex; /* Flexbox для футера */
+    justify-content: space-between; /* Распределяем колонки */
+    align-items: flex-start; /* Выравниваем колонки по верхнему краю */
+    max-width: 1000px; /* Максимальная ширина футера */
+    margin: 0 auto; /* Центрируем футер */
+    padding: 40px 32px; /* Отступы сверху и снизу, как на макете */
+}
+
+.footerColumn {
+    display: flex; /* Flexbox для колонок футера */
+    flex-direction: column; /* Элементы в столбце */
+    gap: 8px; /* Расстояние между ссылками в колонке */
+}
+
+.footerColumn a {
+    color: var(--text-color); /* Цвет ссылок (черный) */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: "Geologica", Helvetica, sans-serif; /* Шрифт для шапки */
+    font-size: 16px; /* Размер шрифта ссылок */
+    line-height: 120%;
+}
+
+.footerColumn a:hover {
+    color: var(--primary-color); /* Красный цвет при наведении */
+}
+
+/* Адаптивность для планшетов (до 1000px поля остаются 32px) */
+@media (max-width: 1000px) {
+    header {
+        width: calc(100% - 2 * var(--container-padding)); /* Сохраняем поля 32px */
+    }
+
+    section {
+        width: calc(100% - 2 * var(--container-padding)); /* Сохраняем поля 32px */
+    }
+
+    footer {
+        width: calc(100% - 2 * var(--container-padding)); /* Сохраняем поля 32px */
+    }
+}
+
+/* Адаптивность для планшетов (≤768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        width: calc(100% - 2 * var(--container-padding));
+        height: auto;
+        align-items: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo {
+        margin-left: 0; /* Убираем дополнительный отступ на планшетах */
+    }
+
+    .navLinks {
+        gap: 20px; /* Уменьшаем расстояние между ссылками */
+    }
+
+    .navIcons {
+        gap: 10px; /* Уменьшаем расстояние между иконками */
+    }
+
+    body main {
+        margin-top: 8px; /* Уменьшаем расстояние до 26px (18px padding-bottom + 8px margin-top) */
+    }
+
+    h1 {
+        font-size: 60px; /* Уменьшаем размер заголовка */
+        letter-spacing: -1.8px; /* -3% от 60px = -1.8px */
+    }
+
+    .textButtonContainer {
+        flex-direction: row; /* Оставляем в ряду на планшетах */
+        margin-bottom: 40px; /* Уменьшаем отступ снизу */
+        gap: 15px; /* Уменьшаем зазор */
+    }
+
+    .textButtonContainer p {
+        max-width: 55%; /* Уменьшаем ширину текста */
+    }
+
+    .textButtonContainer button {
+        width: 180px; /* Уменьшаем ширину кнопки */
+    }
+
+    .heroImage {
+        width: 100%; /* Изображение на всю ширину */
+        margin-bottom: 30px; /* Уменьшаем отступ снизу */
+    }
+
+    .heroBadge {
+        right: -10px; /* Смещаем бейдж меньше */
+        top: 70%; /* Сдвигаем бейдж ниже */
+        transform: scale(0.8) rotate(15deg); /* Уменьшаем бейдж, сохраняем поворот */
+    }
+
+    footer {
+        flex-direction: column; /* Колонки футера в столбец */
+        gap: 20px; /* Расстояние между колонками */
+        padding: 20px 0; /* Убираем боковые отступы */
+        width: calc(100% - 2 * var(--container-padding)); /* Сохраняем поля 32px */
+    }
+
+    .footerColumn {
+        width: 100%; /* Колонки на всю ширину */
+    }
+}
+
+/* Адаптивность для мобильных (≤480px) */
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 16px; /* Уменьшаем поля до 16px на мобильных */
+    }
+
+    header {
+        width: calc(100% - 2 * var(--container-padding)); /* Уменьшенные поля */
+    }
+
+    section {
+        width: calc(100% - 2 * var(--container-padding)); /* Уменьшенные поля */
+    }
+
+    body main {
+        margin-top: 4px; /* Уменьшаем расстояние до 22px (18px padding-bottom + 4px margin-top) */
+    }
+
+    h1 {
+        font-size: 40px; /* Уменьшаем размер заголовка */
+        letter-spacing: -1.2px; /* -3% от 40px = -1.2px */
+    }
+
+    .textButtonContainer {
+        flex-direction: column; /* На мобильных текст и кнопка в столбце */
+        align-items: flex-start; /* Выравниваем по левому краю */
+        margin-bottom: 30px; /* Уменьшаем отступ снизу */
+        gap: 10px; /* Уменьшаем зазор */
+    }
+
+    .textButtonContainer p {
+        max-width: 100%; /* Текст на всю ширину */
+    }
+
+    .textButtonContainer button {
+        width: 100%; /* Кнопка на всю ширину */
+    }
+
+    .heroImage {
+        width: 100%; /* Изображение на всю ширину */
+        margin-bottom: 20px; /* Уменьшаем отступ снизу */
+    }
+
+    .heroBadge {
+        right: 0; /* Возвращаем бейдж на край */
+        top: 80%; /* Сдвигаем ниже */
+        transform: scale(0.6) rotate(15deg); /* Еще меньше, сохраняем поворот */
+    }
+}
